@@ -1,0 +1,117 @@
+/*font-family: 'Recursive', sans-serif;
+font-family: 'Righteous', cursive;*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#FB6B6B;
+}
+
+.firstPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstPage p {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+}
+
+.firstPage img{
+    height: 27vw;
+    width: 18vw;
+}
+
+.firstPage button{
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #D70900;
+}
+
+.subFirstPage{
+    margin-bottom: 73px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
+.secondPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondPage p{
+    font-family: 'Righteous';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+}
+
+.subsecondPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+    margin-bottom: 41px;
+}
+
+.questionsPageTwo {
+    overflow-y: scroll;
+    margin-bottom: 5px;
+}
+
+.questionsPageTwo  button{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 182px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.questionsPageTwo li{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questionsPageTwo ion-icon {
+    width: 13px;
+    height: 15px;
+    color:#333333;
+}
