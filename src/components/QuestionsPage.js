@@ -22,7 +22,7 @@ export default function QuestionPage() {
                 <p>ZapRecall</p>
             </div>
             {
-                questions.map(question => <ContainerFlashs query={question.p} quest={question.Q}/>)
+                questions.map(question => <ContainerFlashs query={question.p} quest={question.Q} answer={question.R}/>)
             }
         </div>
     )

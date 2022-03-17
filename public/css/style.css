@@ -54,10 +54,6 @@ body {
     justify-content: center;
 }
 
-.hide{
-    display: none;
-}
-
 .secondPage {
     display: flex;
     flex-direction: column;
@@ -86,7 +82,7 @@ color: #FFFFFF;
 }
 
 .questionsPageTwo {
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     margin-bottom: 5px;
 }
 
@@ -116,11 +112,81 @@ color: #FFFFFF;
     color:#333333;
 }
 
+
 .questionBlock {
     width: 182px;
-    height: 80px;
+    height: 100px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-bottom: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.questionBlock button{
+    position: absolute;
+	right: 10px;
+	bottom: 5px;
+    width: 20px;
+    height: 13px;
+    border:none;
+}
+
+.questionBlock li{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 6px;
+}
+
+.rememberOptions{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rememberOptions button{
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.rememberOptions button:first-child{
+    width: 55px;
+    height: 24px;
+    background: #FF3030;
+    border-radius: 5px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+}
+
+.rememberOptions button:nth-child(2){
+    width: 55px;
+    height: 24px;
+    background: #FF922E;
+    border-radius: 5px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+}
+
+.rememberOptions button:last-child{
+    width: 55px;
+    height: 24px;
+    background: #2FBE34;
+    border-radius: 5px;
+    position: relative;
+    right: auto;
+    bottom: auto;
 }
