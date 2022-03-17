@@ -1,5 +1,6 @@
 import React from "react";
 import ContainerFlashs from "./ContainerFlashs";
+import AnsweringFlashCards from "./AnsweringFlashCards";
 
 export default function QuestionPage() {
     //const questions = [{ p: "Pergunta 1" }, { p: "Pergunta 2" }, { p: "Pergunta 3" }, { p: "Pergunta 4" }, { p: "Pergunta 5" },
@@ -14,18 +15,38 @@ export default function QuestionPage() {
     { p: "Pergunta 7", Q: "Usamos props para __", R: "passar diferentes informações para componentes" },
     { p: "Pergunta 8", Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }];
 
+    const [containFlashs, setContainFlashs] = React.useState(true)
 
-    return (
-        <div className={`secondPage`}>
+    function backQuestion(props){
+        setContainFlashs(false);
+    }
+
+    if (containFlashs === true) {
+
+        return (
+            <div className={`secondPage`}>
+                <div className="subsecondPage">
+                    <img src="assets/img/logo-pequeno.png" alt="" />
+                    <p>ZapRecall</p>
+                </div>
+                {
+                    questions.map(question => <ContainerFlashs  key={question.p} query={question.p} quest={question.Q} answer={question.R} func={backQuestion}/>)
+                }
+            </div>
+        )
+    } else {
+        return(
+            <div className={`secondPage`}>
             <div className="subsecondPage">
                 <img src="assets/img/logo-pequeno.png" alt="" />
                 <p>ZapRecall</p>
             </div>
             {
-                questions.map(question => <ContainerFlashs query={question.p} quest={question.Q} answer={question.R}/>)
+                questions.map(question => <AnsweringFlashCards  key={question.p} query={question.p} quest={question.Q} answer={question.R} func={backQuestion}/>)
             }
         </div>
-    )
+        )
+    }
 }
 
 /* function QuestionContainer(props) {

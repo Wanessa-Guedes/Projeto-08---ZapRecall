@@ -24,7 +24,7 @@ export default function ContainerFlashs(props) {
                         <li key={props.answer}>{props.answer}</li>
                     </ul>
                     <div className="rememberOptions">
-                        {options.map(option => <button>{option.op}</button>)}
+                        {options.map((option,index) => <button key={index} onClick={()=>props.func(index,false)}>{option.op}</button>)}
                     </div>
                 </div>
             )
