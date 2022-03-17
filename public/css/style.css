@@ -115,3 +115,12 @@ color: #FFFFFF;
     height: 15px;
     color:#333333;
 }
+
+.questionBlock {
+    width: 182px;
+    height: 80px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
