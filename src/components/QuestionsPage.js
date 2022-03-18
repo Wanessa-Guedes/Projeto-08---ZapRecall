@@ -1,5 +1,6 @@
 import React from "react";
 import ContainerFlashs from "./ContainerFlashs";
+import Footer from "./Footer";
 //import AnsweringFlashCards from "./AnsweringFlashCards";
 
 export default function QuestionPage() {
@@ -15,9 +16,11 @@ export default function QuestionPage() {
     { p: "Pergunta 7", Q: "Usamos props para __", R: "passar diferentes informações para componentes" },
     { p: "Pergunta 8", Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }];
 
-
+    let [cardsAnswer, setCardsAnswer] = React.useState(0);
+    const [answersIcons, setStatusFooter] = React.useState([]);
 
         return (
+            <>
             <div className={`secondPage`}>
                 <div className="subsecondPage">
                     <img src="assets/img/logo-pequeno.png" alt="" />
@@ -25,10 +28,16 @@ export default function QuestionPage() {
                 </div>
                 <div className="questionsSecondPage">
                 {
-                    questions.map(question => <ContainerFlashs  key={question.p} query={question.p} quest={question.Q} answer={question.R} len={questions.length}/>)
+                    questions.map((question,index) => <ContainerFlashs  key={index} query={question.p} quest={question.Q} answer={question.R} len={questions.length}  
+                                                        updateAnswerCont={updateAnswerCont => {
+                                                            setCardsAnswer(updateAnswerCont + cardsAnswer)
+                                                                                }}
+                                                        updateIconsFooter={updateIconsFooter => setStatusFooter([...answersIcons, updateIconsFooter])}/>)
                 }
                 </div>
             </div>
+                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons}/>
+                </>
         )
 } 
 

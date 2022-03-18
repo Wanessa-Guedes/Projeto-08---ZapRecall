@@ -8,10 +8,22 @@ export default function ContainerFlashs(props) {
     const [answer, setAnswer] = React.useState(false)
     const [answerOptions, setAnswerOptions] = React.useState(false)
     let [indexOptions, setindexOptions] = React.useState(0)
+    //let [cardsAnswer, setCardsAnswer] = React.useState(0)
+    let [footerAnswer, setfooterAnswer] = React.useState([])
 
-    function answersOptions(props) {
+    function answersOptions(propsChoices,iconsFooter) {
         setAnswerOptions(true);
-        setindexOptions(indexOptions = props);
+        setindexOptions(indexOptions = propsChoices);
+        console.log(iconsFooter);
+        // PENSAR!!!
+//        setfooterAnswer(imgAnswer);
+        if(iconsFooter === "Não lembrei"){
+            props.updateIconsFooter("assets/img/notremember.png")
+        } else if(iconsFooter === "Quase não lembrei"){
+            props.updateIconsFooter("assets/img/almostremember.png")
+        } else {
+            props.updateIconsFooter("assets/img/zap.png")
+        }
     }
 
     if (collapsed === true) {
@@ -22,9 +34,6 @@ export default function ContainerFlashs(props) {
                     <li key={props.query}>{props.query} <ion-icon name="play-outline"></ion-icon></li>
                 </button>
             </ul>
-            {
-                <footer>0/{props.len} CONCLUÍDOS</footer>
-            }
             </>
         )
     } else {
@@ -36,9 +45,11 @@ export default function ContainerFlashs(props) {
                         <li key={props.answer}>{props.answer}</li>
                     </ul>
                     <div className="rememberOptions">
-                        {options.map((option, index) => <button key={index} onClick={() => answersOptions(index)}>{option.op}</button>)}
+                        {options.map((option, index) => <button key={index} onClick={() => {answersOptions(index,option.op)
+                                                                                            props.updateAnswerCont(1)}}>{option.op}</button>)}
                     </div>
                 </div>
+                
             )
 
         } else if (answer === true && answerOptions === true) {
@@ -48,7 +59,7 @@ export default function ContainerFlashs(props) {
                 classCss = `questionsPageTwo red`;
                 return (
                     <ul className={classCss}>
-                        <button onClick={() => setCollapsed(false)}>
+                        <button>
                             <li key={props.query}>{props.query} <img src="assets/img/notremember.png" alt="" /></li>
                         </button>
                     </ul>
@@ -57,7 +68,7 @@ export default function ContainerFlashs(props) {
                 classCss = `questionsPageTwo yellow`;
                 return (
                     <ul className={classCss}>
-                        <button onClick={() => setCollapsed(false)}>
+                        <button>
                             <li key={props.query}>{props.query} <img src="assets/img/almostremember.png" alt="" /></li>
                         </button>
                     </ul>
@@ -66,7 +77,7 @@ export default function ContainerFlashs(props) {
                 classCss = `questionsPageTwo green`;
                 return (
                     <ul className={classCss}>
-                        <button onClick={() => setCollapsed(false)}>
+                        <button>
                             <li key={props.query}>{props.query} <img src="assets/img/zap.png" alt="" /></li>
                         </button>
                     </ul>
