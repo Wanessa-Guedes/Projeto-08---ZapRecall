@@ -8,22 +8,24 @@ export default function ContainerFlashs(props) {
     const [answer, setAnswer] = React.useState(false)
     const [answerOptions, setAnswerOptions] = React.useState(false)
     let [indexOptions, setindexOptions] = React.useState(0)
-    //let [cardsAnswer, setCardsAnswer] = React.useState(0)
-    let [footerAnswer, setfooterAnswer] = React.useState([])
-
+    
+    
     function answersOptions(propsChoices,iconsFooter) {
         setAnswerOptions(true);
         setindexOptions(indexOptions = propsChoices);
-        console.log(iconsFooter);
-        // PENSAR!!!
-//        setfooterAnswer(imgAnswer);
+
         if(iconsFooter === "Não lembrei"){
             props.updateIconsFooter("assets/img/notremember.png")
+            props.updateanswerIconsStatus(true)
         } else if(iconsFooter === "Quase não lembrei"){
             props.updateIconsFooter("assets/img/almostremember.png")
         } else {
             props.updateIconsFooter("assets/img/zap.png")
         }
+    }
+
+    if(props.cardsAnswer === props.len){
+        props.updateFinishAnswer(true);
     }
 
     if (collapsed === true) {

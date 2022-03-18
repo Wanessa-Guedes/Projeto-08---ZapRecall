@@ -18,6 +18,8 @@ export default function QuestionPage() {
 
     let [cardsAnswer, setCardsAnswer] = React.useState(0);
     const [answersIcons, setStatusFooter] = React.useState([]);
+    const [statusAnswers, setStatusAnswers] = React.useState(false);
+    const [answerIconsStatus, setanswerIconsStatus] = React.useState(false);
 
         return (
             <>
@@ -28,15 +30,18 @@ export default function QuestionPage() {
                 </div>
                 <div className="questionsSecondPage">
                 {
-                    questions.map((question,index) => <ContainerFlashs  key={index} query={question.p} quest={question.Q} answer={question.R} len={questions.length}  
+                    questions.map((question,index) => <ContainerFlashs  key={index} query={question.p} quest={question.Q} answer={question.R} len={questions.length}
+                                                        cardsAnswer={cardsAnswer}
                                                         updateAnswerCont={updateAnswerCont => {
                                                             setCardsAnswer(updateAnswerCont + cardsAnswer)
                                                                                 }}
-                                                        updateIconsFooter={updateIconsFooter => setStatusFooter([...answersIcons, updateIconsFooter])}/>)
+                                                        updateIconsFooter={updateIconsFooter => setStatusFooter([...answersIcons, updateIconsFooter])}
+                                                        updateFinishAnswer={statusAnswers => setStatusAnswers(statusAnswers)}
+                                                        updateanswerIconsStatus={answerIconsStatus => setanswerIconsStatus(answerIconsStatus)}/>)
                 }
                 </div>
             </div>
-                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons}/>
+                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons} statusAnswers={statusAnswers} answerIconsStatus={answerIconsStatus}/>
                 </>
         )
 } 
