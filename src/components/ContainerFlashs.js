@@ -16,11 +16,16 @@ export default function ContainerFlashs(props) {
 
     if (collapsed === true) {
         return (
+            <>
             <ul className="questionsPageTwo">
                 <button onClick={() => setCollapsed(false)}>
                     <li key={props.query}>{props.query} <ion-icon name="play-outline"></ion-icon></li>
                 </button>
             </ul>
+            {
+                <footer>0/{props.len} CONCLUÍDOS</footer>
+            }
+            </>
         )
     } else {
 
@@ -67,8 +72,6 @@ export default function ContainerFlashs(props) {
                     </ul>
                 )
             }
-
-
             
         }
         return (

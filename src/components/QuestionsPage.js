@@ -23,9 +23,11 @@ export default function QuestionPage() {
                     <img src="assets/img/logo-pequeno.png" alt="" />
                     <p>ZapRecall</p>
                 </div>
+                <div className="questionsSecondPage">
                 {
-                    questions.map(question => <ContainerFlashs  key={question.p} query={question.p} quest={question.Q} answer={question.R} />)
+                    questions.map(question => <ContainerFlashs  key={question.p} query={question.p} quest={question.Q} answer={question.R} len={questions.length}/>)
                 }
+                </div>
             </div>
         )
 } 
