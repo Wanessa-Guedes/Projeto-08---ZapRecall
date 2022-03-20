@@ -13,6 +13,7 @@ export default function ContainerFlashs(props) {
     const [answerOptions, setAnswerOptions] = React.useState(false)
     let [indexOptions, setindexOptions] = React.useState(0)
     
+    console.log(props.quest);
     
     function answersOptions(propsChoices,iconsFooter) {
         setAnswerOptions(true);
