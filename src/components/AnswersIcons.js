@@ -1,7 +1,7 @@
 
-export function AnswersIcons(answerIcon) {
-    
+export default function AnswersIcons(answerIcon) {
+    console.log(answerIcon.answerIcon)
     return (
-        <img src={answerIcon.answerIcon} />
+        <img src={answerIcon.answerIcon} alt=""/>
     )
 }

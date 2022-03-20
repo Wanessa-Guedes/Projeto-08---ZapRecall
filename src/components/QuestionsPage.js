@@ -1,7 +1,7 @@
 import React from "react";
 import ContainerFlashs from "./ContainerFlashs";
 import Footer from "./Footer";
-//import AnsweringFlashCards from "./AnsweringFlashCards";
+import LogoPequeno from "../assets/img/logopequeno.png";
 
 export default function QuestionPage(props) {
     //const questions = [{ p: "Pergunta 1" }, { p: "Pergunta 2" }, { p: "Pergunta 3" }, { p: "Pergunta 4" }, { p: "Pergunta 5" },
@@ -32,7 +32,7 @@ export default function QuestionPage(props) {
             <>
             <div className={`secondPage`}>
                 <div className="subsecondPage">
-                    <img src="assets/img/logo-pequeno.png" alt="" />
+                    <img src={LogoPequeno} alt="Logo-Tela-FlashCard" />
                     <p>ZapRecall</p>
                 </div>
                 <div className="questionsSecondPage">
@@ -48,19 +48,8 @@ export default function QuestionPage(props) {
                 }
                 </div>
             </div>
-                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons} statusAnswers={statusAnswers} answerIconsStatus={answerIconsStatus} screen={props.screen}/>
+                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons} statusAnswers={statusAnswers} answerIconsStatus={answerIconsStatus}/>
                 </>
         )
 } 
-
-
-/* function QuestionContainer(props) {
-    return (
-        <ul className="questionsPageTwo">
-            <button>
-                <li key={props.query}>{props.query} <ion-icon name="play-outline"></ion-icon></li>
-            </button>
-        </ul>
-    ) 
-} */
 

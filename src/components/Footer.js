@@ -1,5 +1,7 @@
-import QuestionPage from "./QuestionsPage"
-import {AnswersIcons} from "./AnswersIcons"
+//import QuestionPage from "./QuestionsPage"
+import Sad from "../assets/img/sad.png";
+import Party from "../assets/img/party.png";
+import AnswersIcons from "./AnswersIcons"
 
 export default function Footer(props) {
 
@@ -24,13 +26,13 @@ export default function Footer(props) {
         )
     } else {
 
-        if (props.answerIconsStatus === false && props.screen === true) {
+        if (props.answerIconsStatus === false) {
             return (
 
 
                 <div className="footerCSS">
                     <footer> 
-                        <div> <img src="assets/img/party.png" alt="" /> <span>PARABÉNS!</span></div>
+                        <div> <img src={Party} alt="" /> <span>PARABÉNS!</span></div>
                         <div>Você não esqueceu de nenhum flashcard!</div>
                         <div>
                             {
@@ -43,11 +45,11 @@ export default function Footer(props) {
 
 
             )
-        } else if (props.answerIconsStatus === true && props.screen === true){
+        } else {
             return (
                 <div className="footerCSS">
                     <footer> 
-                        <div> <img src="assets/img/sad.png" alt="" /> <span>PUTZ!</span></div>
+                        <div> <img src={Sad} alt="" /> <span>PUTZ!</span></div>
                         <div>Ainda faltaram alguns...Mas não desanime!</div>
                         <div>
                             {

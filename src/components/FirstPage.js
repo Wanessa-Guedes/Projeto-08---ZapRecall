@@ -1,11 +1,12 @@
 import React from "react";
+import Logo from "../assets/img/logo.png";
 
 export default function FirstPage(props) {
 
     return (
         <div className={'firstPage'}>
             <div className="subFirstPage">
-                <img src="assets/img/logo.png" alt="" />
+                <img src={Logo} alt="" />
                 <p>ZapRecall</p>
             </div>
             <button onClick={()=>props.func()}>Iniciar Recall!</button>

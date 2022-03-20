@@ -1,4 +1,8 @@
 import React from "react";
+import NotRemember from "../assets/img/notremember.png";
+import AlmostRemember from "../assets/img/almostremember.png";
+import Zap from "../assets/img/zap.png";
+import TurnAround from "../assets/img/back.png";
 
 export default function ContainerFlashs(props) {
 
@@ -15,12 +19,12 @@ export default function ContainerFlashs(props) {
         setindexOptions(indexOptions = propsChoices);
 
         if(iconsFooter === "Não lembrei"){
-            props.updateIconsFooter("assets/img/notremember.png")
+            props.updateIconsFooter(NotRemember)
             props.updateanswerIconsStatus(true)
         } else if(iconsFooter === "Quase não lembrei"){
-            props.updateIconsFooter("assets/img/almostremember.png")
+            props.updateIconsFooter(AlmostRemember)
         } else {
-            props.updateIconsFooter("assets/img/zap.png")
+            props.updateIconsFooter(Zap)
         }
     }
 
@@ -62,7 +66,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>Pergunta {props.index+1} <img src="assets/img/notremember.png" alt="" /></li>
+                            <li key={props.query}>Pergunta {props.index+1} <img src={NotRemember} alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -71,7 +75,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>Pergunta {props.index+1}<img src="assets/img/almostremember.png" alt="" /></li>
+                            <li key={props.query}>Pergunta {props.index+1}<img src={AlmostRemember} alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -80,7 +84,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>Pergunta {props.index+1} <img src="assets/img/zap.png" alt="" /></li>
+                            <li key={props.query}>Pergunta {props.index+1} <img src={Zap} alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -92,7 +96,7 @@ export default function ContainerFlashs(props) {
                 <ul className="questionsPageTwo">
                     <li key={props.quest}>{props.quest}</li>
                 </ul>
-                <button onClick={() => setAnswer(true)}><img src="assets/img/back.png" alt="" /></button>
+                <button onClick={() => setAnswer(true)}><img src={TurnAround} alt="" /></button>
             </div>
         )
     }

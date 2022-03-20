@@ -15,7 +15,7 @@ export default function App(){
     
     return(
         <>      
-            {screen === false ? <FirstPage func={startScreen}/> : <QuestionPage screen={screen}/>}
+            {screen === false ? <FirstPage func={startScreen}/> : <QuestionPage />}
         </> 
         
     )
