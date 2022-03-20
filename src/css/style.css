@@ -18,14 +18,14 @@ body {
     font-style: normal;
     font-weight: 400;
     color: #FFFFFF;
-    font-size: 25px;
-    line-height: 31px;
+    font-size: 36px;
+    line-height: 45px;
     text-align: center;
 }
 
 .firstPage img{
-    height: 27vw;
-    width: 18vw;
+    width: 136px;
+    height: 161px;
 }
 
 .firstPage button{
@@ -36,10 +36,12 @@ body {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
     color: #D70900;
+    width: 246px;
+    height: 54px;
 }
 
 .subFirstPage{
@@ -62,8 +64,8 @@ body {
     font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 36px;
+    line-height: 45px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -73,14 +75,20 @@ body {
 .subsecondPage {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 22px;
     margin-bottom: 41px;
+    width: calc(255px/375px);
+}
+
+.subsecondPage img{
+    width: 52px;
+    height: 60px;
 }
 
 .questionsSecondPage {
-    overflow-y: scroll;
-    margin-bottom: 52px;
+    /*overflow-y: scroll;*/
+    margin-bottom: 70px;
 }
 
 .questionsPageTwo {
@@ -91,8 +99,8 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    width: 182px;
-    height: 40px;
+    width: 300px;
+    height: 65px;
     cursor: pointer;
 }
 
@@ -100,23 +108,23 @@ body {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 19px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .questionsPageTwo ion-icon {
-    width: 13px;
-    height: 15px;
+    width: 20px;
+    height: 23px;
     color:#333333;
 }
 
 
 .questionBlock {
-    width: 182px;
-    height: 100px;
+    width: 299px;
+    height: 131px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -131,17 +139,22 @@ body {
     position: absolute;
 	right: 10px;
 	bottom: 5px;
-    width: 20px;
-    height: 13px;
+    width: 30px;
+    height: 20px;
     border:none;
+}
+
+.questionBlock button img{
+    width: 30px;
+    height: 20px;
 }
 
 .questionBlock li{
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 18px;
+    line-height: 22px;
     margin-left: 6px;
 }
 
@@ -154,8 +167,8 @@ body {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 7px;
-    line-height: 8px;
+    font-size: 12px;
+    line-height: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,8 +176,8 @@ body {
 }
 
 .rememberOptions button:first-child{
-    width: 55px;
-    height: 24px;
+    width: 85.17px;
+    height: 37.17px;
     background: #FF3030;
     border-radius: 5px;
     position: relative;
@@ -173,8 +186,8 @@ body {
 }
 
 .rememberOptions button:nth-child(2){
-    width: 55px;
-    height: 24px;
+    width: 85.17px;
+    height: 37.17px;
     background: #FF922E;
     border-radius: 5px;
     position: relative;
@@ -183,8 +196,8 @@ body {
 }
 
 .rememberOptions button:last-child{
-    width: 55px;
-    height: 24px;
+    width: 85.17px;
+    height: 37.17px;
     background: #2FBE34;
     border-radius: 5px;
     position: relative;
@@ -207,15 +220,20 @@ body {
     text-decoration: line-through;
 }
 
+.questionsPageTwo img {
+    width: 23px;
+    height: 23px;
+}
+
 .footerStyle {
-    height: 50px;
+    height: 70px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 18px;
+    line-height: 22px;
     color: #333333;
     position: fixed;
     left: 0;
@@ -225,14 +243,19 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    z-index: 2;
+    /* z-index: 2;*/
     flex-direction: column;
 }
 
 .footerCSS {
-    height: 112px;
+    height: 244px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.15);
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
     color: #333333;
     position: fixed;
     left: 0;
@@ -242,7 +265,7 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    z-index: 2;
+    /*z-index: 2;*/
     flex-direction: column;
 }
 
@@ -250,8 +273,8 @@ footer span{
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 18px;
+    line-height: 22px;
     color: #333333;
 }
 
@@ -264,18 +287,37 @@ footer {
 }
 
 footer button{
-    width: 125px;
-    height: 24px;
+    width: 167px;
+    height: 32px;
     background: #FB6B6B;
     border-radius: 5px;
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 17px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     color: #FFFFFF
+}
+
+footer img{
+    width: 23px;
+    height: 23px;
+}
+
+@media (min-width: 800px) {
+
+    .subsecondPage img{
+        min-width: 86px;
+        min-height: 100px;
+    }
+
+    .secondPage p{
+        font-size: 64px;
+        line-height: 79px;
+    }
+
 }
