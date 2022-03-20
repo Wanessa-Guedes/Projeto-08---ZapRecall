@@ -16,6 +16,13 @@ export default function QuestionPage() {
     { p: "Pergunta 7", Q: "Usamos props para __", R: "passar diferentes informações para componentes" },
     { p: "Pergunta 8", Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }];
 
+    questions.sort(comparador); // Após esta linha, a minhaArray estará embaralhada
+
+    function comparador() {
+        return Math.random() - 0.5;
+    }
+    
+    
     let [cardsAnswer, setCardsAnswer] = React.useState(0);
     const [answersIcons, setStatusFooter] = React.useState([]);
     const [statusAnswers, setStatusAnswers] = React.useState(false);
@@ -31,7 +38,7 @@ export default function QuestionPage() {
                 <div className="questionsSecondPage">
                 {
                     questions.map((question,index) => <ContainerFlashs  key={index} query={question.p} quest={question.Q} answer={question.R} len={questions.length}
-                                                        cardsAnswer={cardsAnswer}
+                                                        index={index} cardsAnswer={cardsAnswer}
                                                         updateAnswerCont={updateAnswerCont => {
                                                             setCardsAnswer(updateAnswerCont + cardsAnswer)
                                                                                 }}

@@ -33,7 +33,7 @@ export default function ContainerFlashs(props) {
             <>
             <ul className="questionsPageTwo">
                 <button onClick={() => setCollapsed(false)}>
-                    <li key={props.query}>{props.query} <ion-icon name="play-outline"></ion-icon></li>
+                    <li key={props.query}> Pergunta {props.index+1} <ion-icon name="play-outline"></ion-icon></li>
                 </button>
             </ul>
             </>
