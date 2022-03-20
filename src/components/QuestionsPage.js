@@ -3,7 +3,7 @@ import ContainerFlashs from "./ContainerFlashs";
 import Footer from "./Footer";
 //import AnsweringFlashCards from "./AnsweringFlashCards";
 
-export default function QuestionPage() {
+export default function QuestionPage(props) {
     //const questions = [{ p: "Pergunta 1" }, { p: "Pergunta 2" }, { p: "Pergunta 3" }, { p: "Pergunta 4" }, { p: "Pergunta 5" },
     //{ p: "Pergunta 6" }, { p: "Pergunta 7" }, { p: "Pergunta 8" }];
 
@@ -48,7 +48,7 @@ export default function QuestionPage() {
                 }
                 </div>
             </div>
-                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons} statusAnswers={statusAnswers} answerIconsStatus={answerIconsStatus}/>
+                <Footer cardsAnswer={cardsAnswer} len={questions.length} answersIcons={answersIcons} statusAnswers={statusAnswers} answerIconsStatus={answerIconsStatus} screen={props.screen}/>
                 </>
         )
 } 

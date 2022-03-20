@@ -62,7 +62,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>{props.query} <img src="assets/img/notremember.png" alt="" /></li>
+                            <li key={props.query}>Pergunta {props.index+1} <img src="assets/img/notremember.png" alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -71,7 +71,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>{props.query} <img src="assets/img/almostremember.png" alt="" /></li>
+                            <li key={props.query}>Pergunta {props.index+1}<img src="assets/img/almostremember.png" alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -80,7 +80,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>{props.query} <img src="assets/img/zap.png" alt="" /></li>
+                            <li key={props.query}>Pergunta {props.index+1} <img src="assets/img/zap.png" alt="" /></li>
                         </button>
                     </ul>
                 )
