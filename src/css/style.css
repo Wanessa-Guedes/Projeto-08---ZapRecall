@@ -75,10 +75,10 @@ body {
 .subsecondPage {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 22px;
     margin-bottom: 41px;
-    width: calc(255px/375px);
+    width: calc(0.68*100vw);
 }
 
 .subsecondPage img{
@@ -320,4 +320,23 @@ footer img{
         line-height: 79px;
     }
 
+    .questionsPageTwo  button{
+        width: calc(0.36*100vw);
+    }
+
+    .questionBlock {
+        width: calc(0.36*100vw);
+    }
+
+    .rememberOptions button:first-child{
+        width: calc(0.36*0.28*100vw);
+    }
+
+    .rememberOptions button:nth-child(2){
+        width: calc(0.36*0.28*100vw);
+    }
+
+    .rememberOptions button:last-child{
+        width: calc(0.36*0.28*100vw);
+    }
 }
