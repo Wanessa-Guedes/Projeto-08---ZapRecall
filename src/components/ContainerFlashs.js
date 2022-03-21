@@ -1,3 +1,5 @@
+// Função com toda a lógica das respostas dos flashCards
+
 import React from "react";
 import NotRemember from "../assets/img/notremember.png";
 import AlmostRemember from "../assets/img/almostremember.png";
@@ -12,9 +14,8 @@ export default function ContainerFlashs(props) {
     const [answer, setAnswer] = React.useState(false)
     const [answerOptions, setAnswerOptions] = React.useState(false)
     let [indexOptions, setindexOptions] = React.useState(0)
-    
-    console.log(props.quest);
-    
+
+    // Função que chamada pelo clique nas options - Estiliza a pergunta respondida - Atualiza o footer  
     function answersOptions(propsChoices,iconsFooter) {
         setAnswerOptions(true);
         setindexOptions(indexOptions = propsChoices);
@@ -38,7 +39,7 @@ export default function ContainerFlashs(props) {
             <>
             <ul className="questionsPageTwo">
                 <button onClick={() => setCollapsed(false)}>
-                    <li key={props.query}> Pergunta {props.index+1} <ion-icon name="play-outline"></ion-icon></li>
+                    <li key={props.index}> Pergunta {props.index+1} <ion-icon name="play-outline"></ion-icon></li>
                 </button>
             </ul>
             </>
@@ -67,7 +68,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>Pergunta {props.index+1} <img src={NotRemember} alt="" /></li>
+                            <li key={props.index}>Pergunta {props.index+1} <img src={NotRemember} alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -76,7 +77,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>Pergunta {props.index+1}<img src={AlmostRemember} alt="" /></li>
+                            <li key={props.index}>Pergunta {props.index+1}<img src={AlmostRemember} alt="" /></li>
                         </button>
                     </ul>
                 )
@@ -85,7 +86,7 @@ export default function ContainerFlashs(props) {
                 return (
                     <ul className={classCss}>
                         <button>
-                            <li key={props.query}>Pergunta {props.index+1} <img src={Zap} alt="" /></li>
+                            <li key={props.index}>Pergunta {props.index+1} <img src={Zap} alt="" /></li>
                         </button>
                     </ul>
                 )

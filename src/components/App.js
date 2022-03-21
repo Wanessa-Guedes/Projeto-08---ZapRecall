@@ -1,3 +1,5 @@
+// Função de inicializaçao da tela principal ou da tela de perguntas dependendo do estado de screen
+
 import react from "react";
 import React from "react";
 import FirstPage from "./FirstPage";
@@ -12,6 +14,7 @@ export default function App(){
     function startScreen(){
         setScreen(true);
     }
+    
     
     return(
         <>      

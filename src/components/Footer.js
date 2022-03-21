@@ -1,14 +1,17 @@
-//import QuestionPage from "./QuestionsPage"
+// Função que renderiza o footer
+
 import Sad from "../assets/img/sad.png";
 import Party from "../assets/img/party.png";
 import AnswersIcons from "./AnswersIcons"
 
 export default function Footer(props) {
 
+    // recarregar a página - botão Reiniciar Recall
     function reloadPage(){
         window.location.reload()
     }
 
+    // Footer sem finalizar os flashcards
     if (props.statusAnswers === false) {
         return (
             <>
@@ -25,7 +28,7 @@ export default function Footer(props) {
             </>
         )
     } else {
-
+            // Opções de Footer depois de finalizar os flashcards
         if (props.answerIconsStatus === false) {
             return (
 

@@ -1,3 +1,5 @@
+// Função da tela de início -- botão muda o estado de screen no App para renderizar as questões
+
 import React from "react";
 import Logo from "../assets/img/logo.png";
 

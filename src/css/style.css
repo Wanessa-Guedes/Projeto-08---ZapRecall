@@ -6,6 +6,7 @@ body {
     background-color:#FB6B6B;
 }
 
+/*Estilos primeira tela*/
 .firstPage {
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@ body {
     justify-content: center;
 }
 
+/*Estilos tela perguntas*/
 .secondPage {
     display: flex;
     flex-direction: column;
@@ -225,6 +227,8 @@ body {
     height: 23px;
 }
 
+/*Estilos Footer*/
+
 .footerStyle {
     height: 70px;
     background: #FFFFFF;
@@ -243,7 +247,6 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    /* z-index: 2;*/
     flex-direction: column;
 }
 
@@ -265,7 +268,6 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    /*z-index: 2;*/
     flex-direction: column;
 }
 
@@ -307,6 +309,8 @@ footer img{
     width: 23px;
     height: 23px;
 }
+
+/*Estilo telas maiores*/
 
 @media (min-width: 800px) {
 
